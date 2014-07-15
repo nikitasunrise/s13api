@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% block content%}
+{% if not  posts %} <h2 style="margin: 0 50%; font-size:32pt">404</h2> {% endif %}
+{% for post in posts %}
+    <div class="post">
+    <b>{{ post.own_user}}</b><br><br>
+    {{ post.title }} <br><br>
+    <p>{{ post.body }}</p> <br>
+    Дата создания:<br>
+    {{ post.timestamp}}
+    </div>
+    <br><br>
+{% endfor %}
+{% endblock %}

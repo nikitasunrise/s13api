@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    div {display: block;}
+    body {color: #dfe; background: #456; padding 0 5em; margin 0}
+    h1 {padding: 1em 1em; font-size:16pt; background-color: #598}
+    h2 {color: #8cb; margin-top: 1em}
+    h3 {color: #8cb; margin-top: 1em}
+    p {margin: 1em 0; color: #8cb}
+    li {color: #134; margin-top: 1em}
+    input {color: #576}
+    a {text-decoration:none}
+    a:visited {color: #dfe}
+    .post { margin:0 25%; background-color:#598; padding: 10px; border-radius: 7px}
+    .log_reg { float: right}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div class="header">
+        <div class="to_main">
+            <a href="/api/"><h1>API</h1></a>
+        </div>
+        <div class="log_reg">
+            <a href="/api/login/"><input type="button" value="Log In"></a>
+            <a href="/api/reg/"><input type="button" value="Registration"></a>
+        </div>
+    </div>
+    <br>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

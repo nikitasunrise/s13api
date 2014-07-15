@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% block content%}
+{% if not  msgs %} <h2 style="margin: 0 50%; font-size:32pt">404</h2> {% endif %}
+{% for msg in msgs %}
+    <div class="post">
+    <b>{{ msg.own_user}}</b><br><br>
+    {{ msg.title }} <br><br>
+    <p>{{ msg.body }}</p> <br>
+    Дата создания:<br>
+    {{ msg.timestamp}}
+    </div>
+    <br><br>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+{% block content%}
+
+<a href="msg/"><input type="button" value="To Posts"></a>
+<a href="/admin/"><input type="button" value="For Admin"></a>
+<h2>{{ header }}</h2>
+<h3>List of users</h3>
+<ul>
+{% for user in users %}
+    <li type="square"><b><a href='id{{ user.id }}/'>{{ user }}</a></b></li>
+    <br>
+
+{% endfor %}
+</ul>
+{% endblock %}
+
